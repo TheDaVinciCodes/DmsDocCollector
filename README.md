@@ -24,7 +24,7 @@ Command line / Webserver tool for provide claimed docs
 Clone the project
 
 ```bash
-  git clone https://github.com/TheDaVinciCodes/DmsDocCollector.git)
+  git clone https://github.com/TheDaVinciCodes/DmsDocCollector.git
 ```
 
 Go to the project directory
