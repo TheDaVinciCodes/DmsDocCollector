@@ -1,5 +1,5 @@
 # DMS Doc Collector
-Command line / Webserver tool for claim extract
+Command line / Webserver tool for provide claimed docs
 
 ## Environment Requirements
 #### System
@@ -24,7 +24,7 @@ Command line / Webserver tool for claim extract
 Clone the project
 
 ```bash
-  git clone https://gitlab.scm-emea.aws.fisv.cloud/faywhnt/doccollector.git
+  git clone https://github.com/TheDaVinciCodes/DmsDocCollector.git)
 ```
 
 Go to the project directory
