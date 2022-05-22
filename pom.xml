@@ -11,7 +11,7 @@
 	<artifactId>doccollector</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>doccollector</name>
-	<description>Tool to collect claimed files from dms server</description>
+	<description>Web-Tool to collect docs from dms server</description>
 	<packaging>jar</packaging>
 	<properties>
 		<java.version>11</java.version>

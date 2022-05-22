@@ -1,4 +1,4 @@
-package de.fiserv.doccollector;
+package com.tdvc.doccollector;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
