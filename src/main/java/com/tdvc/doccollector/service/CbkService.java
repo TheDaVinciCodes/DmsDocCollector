@@ -62,8 +62,10 @@ public class CbkService {
 			final String hostId = map.get("EHOSTID").toString();
 			final String customerName = map.get("CUSTOMER_NAME").toString();
 			final String docId = hostId.substring(hostId.lastIndexOf("~") + 1);
-			final String system = hostId.substring(hostId.indexOf("~") + 1, hostId.indexOf("-"));
-			final String mandate = hostId.substring(hostId.indexOf("-") + 1, hostId.lastIndexOf("~"));
+			final String system = hostId.substring(hostId.indexOf("~") + 1, 
+					hostId.indexOf("-"));
+			final String mandate = hostId.substring(hostId.indexOf("-") + 1, 
+					hostId.lastIndexOf("~"));
 			logger.info("Persisting claim: " + claimId + ", docId: " + docId);
 			final String sessionId = dmsService.getDmsSession(system, mandate);
 			final JsonNode document = dmsService.getDocument(docId, sessionId);

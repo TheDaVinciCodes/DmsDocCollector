@@ -15,13 +15,14 @@ import com.tdvc.dms.rest.model.LoginRequest;
 public class DmsService {
 
 	private final DmsRestClient dmsRestClient;
-	private static String DMS_TECHNICAL_USER;
 
-	DmsService(DmsRestClient dmsRestClient, @Value("${dms.technical.user}") String user) {
+	DmsService(DmsRestClient dmsRestClient) {
 		this.dmsRestClient = dmsRestClient;
-		DMS_TECHNICAL_USER = user;
 	}
 
+	@Value("${dms.technical.user}")
+	private static String DMS_TECHNICAL_USER;
+	
 	String getDmsSession(String system, String mandate) {
 		return dmsRestClient.logon(DmsRequestBuilder.getLoginRequest(system, mandate)).block();
 	}
@@ -30,7 +31,7 @@ public class DmsService {
 		return dmsRestClient.getDocument(docId, sessionId).block();
 	}
 
-	private static final class DmsRequestBuilder {
+	private final static class DmsRequestBuilder {
 
 		private static LoginRequest getLoginRequest(String system, String mandate) {
 			return LoginRequest.builder()
@@ -39,7 +40,5 @@ public class DmsService {
 					.userId(DMS_TECHNICAL_USER)
 					.build();
 		}
-
 	}
-
 }

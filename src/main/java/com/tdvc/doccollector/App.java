@@ -63,14 +63,13 @@ public class App extends WebSecurityConfigurerAdapter {
           .formLogin();
     }
 
-	@Bean
 	@ConfigurationProperties(prefix="spring.datasource")
-	public DataSource dataSource() {
+	DataSource dataSource() {
 	    return DataSourceBuilder.create().build();
 	}
 
 	@Bean
-	public JdbcTemplate jdbcTemplate(DataSource ds) {
+	JdbcTemplate jdbcTemplate(DataSource ds) {
 	    return new JdbcTemplate(ds);
 	}
 
