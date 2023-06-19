@@ -1,5 +1,7 @@
+!!! This was a Project for my Internship in a company working with an internal DMS therefor the following documentation is for demonstration purposes only and consequently will not work in other systems since the DmsRestClient library isn't available !!!
+
 # DMS Doc Collector
-Command line / Webserver tool for provide claimed docs
+Command line / Webserver tool to provide claimed docs.
 
 ## Environment Requirements
 #### System
